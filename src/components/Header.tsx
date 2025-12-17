@@ -18,12 +18,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-white to-[#CDE8D6]/30 shadow-sm sticky top-0 z-50 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-purple-600" />
-            <span className="text-xl font-bold text-gray-900">Pranic Healing Center</span>
+            <Heart className="h-8 w-8 text-[#5A8A6A]" fill="#5A8A6A" />
+            <span className="text-xl font-bold text-[#2A3A32]">Pranic Healing Center</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -41,7 +41,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-purple-600 transition-colors"
+              className="text-sm font-semibold leading-6 text-[#2A3A32] hover:text-[#4A9AC7] transition-colors"
             >
               {item.name}
             </Link>
@@ -50,7 +50,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/schedule"
-            className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-colors"
+            className="rounded-md bg-gradient-to-r from-[#B7E4F7] to-[#A3DCEF] px-3.5 py-2.5 text-sm font-bold text-[#1A2A22] shadow-sm hover:shadow-md hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3DCEF] transition-all"
           >
             Book Session
           </Link>
@@ -74,12 +74,12 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-br from-[#FAF9F6] to-[#CDE8D6]/40 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[#A8D5BA]/30 backdrop-blur-lg"
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
-                  <Heart className="h-8 w-8 text-purple-600" />
-                  <span className="text-xl font-bold text-gray-900">Pranic Healing</span>
+                  <Heart className="h-8 w-8 text-[#5A8A6A]" fill="#5A8A6A" />
+                  <span className="text-xl font-bold text-[#2A3A32]">Pranic Healing</span>
                 </Link>
                 <button
                   type="button"
@@ -97,7 +97,7 @@ export default function Header() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#2A3A32] hover:bg-[#CDE8D6]/40 transition-colors"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -107,7 +107,7 @@ export default function Header() {
                   <div className="py-6">
                     <Link
                       href="/schedule"
-                      className="block rounded-md bg-purple-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-purple-500 transition-colors"
+                      className="block rounded-md bg-gradient-to-r from-[#B7E4F7] to-[#A3DCEF] px-3.5 py-2.5 text-center text-sm font-bold text-[#1A2A22] shadow-sm hover:shadow-md transition-all"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Book Session

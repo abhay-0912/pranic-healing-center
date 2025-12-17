@@ -157,13 +157,13 @@ export default function Benefits() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-[#2A3A32] mb-4">
               Comprehensive{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
                 Healing Benefits
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#2A3A32]/80 max-w-3xl mx-auto">
               Experience transformation on physical, mental, and spiritual levels
             </p>
           </motion.div>
@@ -174,17 +174,17 @@ export default function Benefits() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8"
+              className="bg-gradient-to-br from-[#F6C1B5]/20 to-[#F6C1B5]/10 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                <Heart className="h-8 w-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#F6C1B5] to-[#F6C1B5]/70 rounded-xl flex items-center justify-center mb-6">
+                <Heart className="h-8 w-8 text-[#1A2A22]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Physical Benefits</h3>
+              <h3 className="text-2xl font-bold text-[#2A3A32] mb-6">Physical Benefits</h3>
               <ul className="space-y-3">
                 {physicalBenefits.map((benefit, index) => (
                   <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
+                    <CheckCircle className="h-5 w-5 text-[#5A8A6A] flex-shrink-0" />
+                    <span className="text-[#2A3A32]/90">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -195,17 +195,17 @@ export default function Benefits() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8"
+              className="bg-gradient-to-br from-[#B7E4F7]/20 to-[#A3DCEF]/10 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <Brain className="h-8 w-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#B7E4F7] to-[#A3DCEF] rounded-xl flex items-center justify-center mb-6">
+                <Brain className="h-8 w-8 text-[#1A2A22]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Mental Benefits</h3>
+              <h3 className="text-2xl font-bold text-[#2A3A32] mb-6">Mental Benefits</h3>
               <ul className="space-y-3">
                 {mentalBenefits.map((benefit, index) => (
                   <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
+                    <CheckCircle className="h-5 w-5 text-[#4A9AC7] flex-shrink-0" />
+                    <span className="text-[#2A3A32]/90">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -216,17 +216,17 @@ export default function Benefits() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8"
+              className="bg-gradient-to-br from-[#E6D9F2]/20 to-[#D8C7E8]/10 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E6D9F2] to-[#D8C7E8] rounded-xl flex items-center justify-center mb-6">
+                <Zap className="h-8 w-8 text-[#1A2A22]" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Spiritual Benefits</h3>
+              <h3 className="text-2xl font-bold text-[#2A3A32] mb-6">Spiritual Benefits</h3>
               <ul className="space-y-3">
                 {spiritualBenefits.map((benefit, index) => (
                   <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-purple-500 flex-shrink-0" />
-                    <span className="text-gray-700">{benefit}</span>
+                    <CheckCircle className="h-5 w-5 text-[#8B7BA8] flex-shrink-0" />
+                    <span className="text-[#2A3A32]/90">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -236,7 +236,7 @@ export default function Benefits() {
       </section>
 
       {/* Scientific Evidence */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-[#CDE8D6]/20 to-[#FAF9F6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -244,9 +244,9 @@ export default function Benefits() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-[#2A3A32] mb-4">
               Scientific{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
                 Evidence
               </span>
             </h2>

@@ -3,28 +3,28 @@ import { Heart, Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-[#2A3A32] to-[#1A2A22] text-[#FAF9F6]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-10">
           <div className="space-y-6 sm:space-y-8 xl:col-span-1">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-purple-400" />
-              <span className="text-xl font-bold">Pranic Healing Center</span>
+              <Heart className="h-8 w-8 text-[#A8D5BA]" fill="#A8D5BA" />
+              <span className="text-xl font-bold text-white">Pranic Healing Center</span>
             </div>
-            <p className="text-sm leading-6 text-gray-300">
+            <p className="text-sm leading-6 text-white/90">
               Transform your life through the ancient wisdom of Pranic Healing. 
               Experience deep healing and spiritual growth with our certified instructors.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <a href="#" className="text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                 <span className="sr-only">Facebook</span>
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <a href="#" className="text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <a href="#" className="text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="h-6 w-6" />
               </a>
@@ -35,25 +35,25 @@ export default function Footer() {
             {/* Services */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
+                <h3 className="text-sm font-semibold leading-6 text-[#FAF9F6]">Services</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/services" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Basic Pranic Healing
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/services" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Advanced Healing
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/services" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Twin Hearts Meditation
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/services" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Crystal Healing
                     </Link>
                   </li>
@@ -61,25 +61,25 @@ export default function Footer() {
               </div>
               {/* Company */}
               <div className="pt-2">
-                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+                <h3 className="text-sm font-semibold leading-6 text-[#FAF9F6]">Company</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <Link href="/about" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/about" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link href="/benefits" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/benefits" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Benefits
                     </Link>
                   </li>
                   <li>
-                    <Link href="/schedule" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/schedule" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Schedule
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="text-sm leading-6 text-gray-300 hover:text-white transition-colors">
+                    <Link href="/contact" className="text-sm leading-6 text-[#FAF9F6]/70 hover:text-[#A3DCEF] transition-colors">
                       Contact
                     </Link>
                   </li>
@@ -89,19 +89,19 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Contact Info</h3>
+                <h3 className="text-sm font-semibold leading-6 text-[#FAF9F6]">Contact Info</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex items-center space-x-2 max-w-full">
-                    <Phone className="h-4 w-4 text-purple-400 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">(555) 123-4567</span>
+                    <Phone className="h-4 w-4 text-[#A8D5BA] flex-shrink-0" />
+                    <span className="text-sm text-[#FAF9F6]/70">(555) 123-4567</span>
                   </li>
                   <li className="flex items-start space-x-2 max-w-full">
-                    <Mail className="h-4 w-4 text-purple-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-300 break-all">info@pranichealingcenter.com</span>
+                    <Mail className="h-4 w-4 text-[#A8D5BA] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-[#FAF9F6]/70 break-all">info@pranichealingcenter.com</span>
                   </li>
                   <li className="flex items-start space-x-2 max-w-full">
-                    <MapPin className="h-4 w-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">
+                    <MapPin className="h-4 w-4 text-[#A8D5BA] mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-[#FAF9F6]/70">
                       123 Healing Lane<br />
                       Wellness City, WC 12345
                     </span>
@@ -111,8 +111,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 sm:mt-16 lg:mt-20 border-t border-gray-800 pt-6 sm:pt-8">
-          <p className="text-xs leading-5 text-gray-400 text-center px-2">
+        <div className="mt-12 sm:mt-16 lg:mt-20 border-t border-[#FAF9F6]/20 pt-6 sm:pt-8">
+          <p className="text-xs leading-5 text-[#FAF9F6]/60 text-center px-2">
             &copy; 2024 Pranic Healing Center. All rights reserved. | Certified by Master Choa Kok Sui Institute
           </p>
         </div>

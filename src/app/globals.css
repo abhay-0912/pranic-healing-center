@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Healing Color Palette - Pranic Energy */
+  --healing-mint: #CDE8D6;
+  --healing-sage: #A8D5BA;
+  --healing-sky: #B7E4F7;
+  --healing-aqua: #A3DCEF;
+  --healing-lavender: #E6D9F2;
+  --healing-violet: #D8C7E8;
+  --healing-offwhite: #FAF9F6;
+  --healing-warm: #F4F1EC;
+  --healing-peach: #F6C1B5;
+  --healing-earth: #D6C7B2;
+  --healing-charcoal: #3A4A42;
+  
+  --background: #FAF9F6;
+  --foreground: #3A4A42;
 }
 
 @theme inline {
@@ -14,8 +27,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2A3A32;
+    --foreground: #F4F1EC;
   }
 }
 

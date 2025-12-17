@@ -28,7 +28,7 @@ const services = [
       'Basic healing techniques',
       'Self-healing guidance'
     ],
-    gradient: 'from-rose-400 to-pink-600',
+    gradient: 'from-[#A8D5BA] to-[#CDE8D6]',
     popular: false
   },
   {
@@ -44,7 +44,7 @@ const services = [
       'Deep energy work',
       'Comprehensive treatment plan'
     ],
-    gradient: 'from-blue-400 to-indigo-600',
+    gradient: 'from-[#B7E4F7] to-[#A3DCEF]',
     popular: true
   },
   {
@@ -60,7 +60,7 @@ const services = [
       'Mental clarity enhancement',
       'Stress management'
     ],
-    gradient: 'from-purple-400 to-violet-600',
+    gradient: 'from-[#E6D9F2] to-[#D8C7E8]',
     popular: false
   },
   {
@@ -76,7 +76,7 @@ const services = [
       'Stress relief',
       'Spiritual development'
     ],
-    gradient: 'from-green-400 to-emerald-600',
+    gradient: 'from-[#A8D5BA] to-[#5A8A6A]',
     popular: false
   },
   {
@@ -92,7 +92,7 @@ const services = [
       'Enhanced healing power',
       'Crystal meditation'
     ],
-    gradient: 'from-teal-400 to-cyan-600',
+    gradient: 'from-[#A3DCEF] to-[#B7E4F7]',
     popular: false
   },
   {
@@ -142,10 +142,10 @@ export default function Services() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl font-bold text-white mb-6"
+            className="text-5xl sm:text-6xl font-bold text-[#1A2A22] mb-6"
           >
             Our{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
               Healing Services
             </span>
           </motion.h1>
@@ -153,8 +153,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-3xl mx-auto"
-          >
+            className="text-xl text-[#2A3A32]/90 max-w-3xl mx-auto">
             Comprehensive energy healing solutions tailored to your unique needs and healing journey
           </motion.p>
         </div>
@@ -169,13 +168,13 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-[#2A3A32] mb-4">
               Choose Your{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
                 Healing Path
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-[#2A3A32]/80 max-w-3xl mx-auto">
               From foundational healing to advanced techniques, find the perfect service for your wellness journey
             </p>
           </motion.div>
@@ -192,7 +191,7 @@ export default function Services() {
                 {/* Popular badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 z-20">
-                    <div className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="bg-[#F6C1B5] text-[#1A2A22] px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                       Most Popular
                     </div>
                   </div>
@@ -209,24 +208,24 @@ export default function Services() {
                     </div>
 
                     {/* Header */}
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-[#2A3A32] mb-3">{service.title}</h3>
+                    <p className="text-[#2A3A32]/80 mb-6 leading-relaxed">{service.description}</p>
 
                     {/* Duration and Price */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center space-x-2 text-gray-500">
+                      <div className="flex items-center space-x-2 text-[#2A3A32]/70">
                         <Clock className="h-4 w-4" />
                         <span className="text-sm">{service.duration}</span>
                       </div>
-                      <div className="text-2xl font-bold text-gray-900">{service.price}</div>
+                      <div className="text-2xl font-bold text-[#2A3A32]">{service.price}</div>
                     </div>
 
                     {/* Features */}
                     <ul className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-[#5A8A6A] flex-shrink-0" />
+                          <span className="text-[#2A3A32]/80 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -234,7 +233,7 @@ export default function Services() {
                     {/* CTA Button */}
                     <Link
                       href="/schedule"
-                      className={`block w-full bg-gradient-to-r ${service.gradient} text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 group-hover:scale-105`}
+                      className={`block w-full bg-gradient-to-r ${service.gradient} text-[#1A2A22] text-center py-3 rounded-lg font-bold hover:shadow-lg transition-all duration-300 group-hover:scale-105`}
                     >
                       Book Session
                     </Link>

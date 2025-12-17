@@ -15,49 +15,49 @@ const benefits = [
     title: 'Stress Relief',
     description: 'Release tension and find deep relaxation',
     icon: Shield,
-    color: 'from-green-400 to-emerald-600',
-    bgColor: 'bg-green-50',
-    iconColor: 'text-green-600'
+    color: 'from-[#A8D5BA] to-[#CDE8D6]',
+    bgColor: 'bg-[#CDE8D6]/30',
+    iconColor: 'text-[#A8D5BA]'
   },
   {
     title: 'Boost Energy',
     description: 'Increase vitality and life force energy',
     icon: Zap,
-    color: 'from-blue-400 to-cyan-600',
-    bgColor: 'bg-blue-50',
-    iconColor: 'text-blue-600'
+    color: 'from-[#B7E4F7] to-[#A3DCEF]',
+    bgColor: 'bg-[#B7E4F7]/30',
+    iconColor: 'text-[#A3DCEF]'
   },
   {
     title: 'Inner Peace',
     description: 'Achieve emotional balance and harmony',
     icon: Heart,
-    color: 'from-purple-400 to-pink-600',
-    bgColor: 'bg-purple-50',
-    iconColor: 'text-purple-600'
+    color: 'from-[#E6D9F2] to-[#D8C7E8]',
+    bgColor: 'bg-[#E6D9F2]/30',
+    iconColor: 'text-[#D8C7E8]'
   },
   {
     title: 'Community Support',
     description: 'Connect with like-minded healing souls',
     icon: Users,
-    color: 'from-yellow-400 to-orange-600',
-    bgColor: 'bg-yellow-50',
-    iconColor: 'text-yellow-600'
+    color: 'from-[#F6C1B5] to-[#F6C1B5]/70',
+    bgColor: 'bg-[#F6C1B5]/30',
+    iconColor: 'text-[#F6C1B5]'
   },
   {
     title: 'Self-Healing',
     description: 'Learn techniques for personal wellness',
     icon: Hand,
-    color: 'from-pink-400 to-rose-600',
-    bgColor: 'bg-pink-50',
-    iconColor: 'text-pink-600'
+    color: 'from-[#A8D5BA] to-[#B7E4F7]',
+    bgColor: 'bg-[#A8D5BA]/20',
+    iconColor: 'text-[#A8D5BA]'
   },
   {
     title: 'Proven Results',
     description: 'Experience scientifically-backed healing',
     icon: Award,
-    color: 'from-indigo-400 to-purple-600',
-    bgColor: 'bg-indigo-50',
-    iconColor: 'text-indigo-600'
+    color: 'from-[#D8C7E8] to-[#E6D9F2]',
+    bgColor: 'bg-[#D8C7E8]/30',
+    iconColor: 'text-[#D8C7E8]'
   }
 ]
 
@@ -96,7 +96,7 @@ export default function BenefitsSection() {
               className="group relative"
             >
               {/* Glassmorphism card */}
-              <div className="relative bg-white/70 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div className="relative bg-white/80 backdrop-blur-lg border border-[#A8D5BA]/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
                 {/* Background gradient on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`} />
                 
@@ -106,10 +106,10 @@ export default function BenefitsSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+                <h3 className="text-2xl font-bold text-[#2A3A32] mb-3 transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-[#2A3A32]/80 leading-relaxed">
                   {benefit.description}
                 </p>
 

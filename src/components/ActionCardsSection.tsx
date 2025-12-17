@@ -9,7 +9,7 @@ const actionCards = [
     title: 'Book a Session',
     description: 'Schedule your personal healing session with our certified Pranic Healing instructors',
     icon: Calendar,
-    gradient: 'from-green-500 to-emerald-600',
+    gradient: 'from-[#A8D5BA] to-[#CDE8D6]',
     buttonText: 'Book Now',
     href: '/schedule',
     delay: 0
@@ -18,7 +18,7 @@ const actionCards = [
     title: 'Free Consultation',
     description: 'Get personalized guidance and learn which healing approach is right for you',
     icon: MessageCircle,
-    gradient: 'from-yellow-500 to-orange-600',
+    gradient: 'from-[#F6C1B5] to-[#F6C1B5]/70',
     buttonText: 'Schedule Call',
     href: '/contact',
     delay: 0.2
@@ -27,7 +27,7 @@ const actionCards = [
     title: 'Join Workshop',
     description: 'Participate in group healing sessions and learn self-healing techniques',
     icon: Star,
-    gradient: 'from-blue-500 to-cyan-600',
+    gradient: 'from-[#B7E4F7] to-[#A3DCEF]',
     buttonText: 'View Schedule',
     href: '/schedule',
     delay: 0.4
@@ -70,27 +70,27 @@ export default function ActionCardsSection() {
             >
               <div className="relative h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
                 {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-90`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-30`} />
                 
                 {/* Content */}
-                <div className="relative z-10 p-8 h-full flex flex-col text-white">
+                <div className="relative z-10 p-8 h-full flex flex-col">
                   {/* Icon */}
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <card.icon className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 bg-[#2A3A32]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <card.icon className="h-8 w-8 text-[#2A3A32]" />
                   </div>
 
                   {/* Title and description */}
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-2xl font-bold mb-4 text-[#1A2A22]">
                     {card.title}
                   </h3>
-                  <p className="text-white/90 leading-relaxed mb-8 flex-grow">
+                  <p className="text-[#2A3A32] leading-relaxed mb-8 flex-grow font-medium">
                     {card.description}
                   </p>
 
                   {/* CTA Button */}
                   <Link
                     href={card.href}
-                    className="inline-flex items-center justify-center bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 group-hover:scale-105 transform"
+                    className="inline-flex items-center justify-center bg-white text-[#2A3A32] px-6 py-3 rounded-lg font-bold hover:bg-white hover:shadow-lg transition-all duration-300 group-hover:scale-105 transform"
                   >
                     {card.buttonText}
                   </Link>

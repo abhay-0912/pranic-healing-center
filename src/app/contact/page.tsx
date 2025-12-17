@@ -57,19 +57,19 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#FAF9F6] to-[#F4F1EC]">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 py-20">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative bg-gradient-to-br from-[#CDE8D6] via-[#B7E4F7] to-[#E6D9F2] py-20">
+        <div className="absolute inset-0 bg-white/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl font-bold text-white mb-6"
+            className="text-5xl sm:text-6xl font-bold text-[#1A2A22] mb-6"
           >
             Get in{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
               Touch
             </span>
           </motion.h1>
@@ -77,7 +77,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-3xl mx-auto"
+            className="text-xl text-[#2A3A32]/90 max-w-3xl mx-auto">
           >
             Have questions about Pranic Healing? Ready to start your wellness journey? 
             We&apos;re here to help and guide you.
@@ -96,8 +96,8 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                <p className="text-gray-600 leading-relaxed">
+                <h2 className="text-3xl font-bold text-[#2A3A32] mb-6">Contact Information</h2>
+                <p className="text-[#2A3A32]/80 leading-relaxed">
                   Reach out to us through any of the channels below. Our friendly team is 
                   ready to assist you on your healing journey.
                 </p>

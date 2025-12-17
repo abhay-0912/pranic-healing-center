@@ -132,16 +132,16 @@ export default function Schedule() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 py-16">
+      <section className="bg-gradient-to-br from-[#CDE8D6] via-[#B7E4F7] to-[#E6D9F2] py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl font-bold text-white mb-4"
+            className="text-4xl sm:text-5xl font-bold text-[#1A2A22] mb-4"
           >
             Book Your{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#F6C1B5] to-[#A3DCEF] bg-clip-text text-transparent">
               Healing Session
             </span>
           </motion.h1>
@@ -149,7 +149,7 @@ export default function Schedule() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-3xl mx-auto"
+            className="text-xl text-[#2A3A32] max-w-3xl mx-auto"
           >
             Choose your preferred date, time, and instructor for a personalized healing experience
           </motion.p>
@@ -167,15 +167,15 @@ export default function Schedule() {
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Select Date</h2>
+                <h2 className="text-2xl font-bold text-[#1A2A22]">Select Date</h2>
                 <div className="flex items-center space-x-4">
                   <button
                     onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))}
-                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="p-2 hover:bg-[#CDE8D6]/30 rounded-lg transition-colors text-[#2A3A32]"
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </button>
-                  <span className="text-lg font-semibold min-w-[200px] text-center">
+                  <span className="text-lg font-semibold min-w-[200px] text-center text-[#1A2A22]">
                     {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
                   </span>
                   <button
@@ -190,7 +190,7 @@ export default function Schedule() {
               {/* Calendar Grid */}
               <div className="grid grid-cols-7 gap-1 mb-4">
                 {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                  <div key={day} className="p-3 text-center text-sm font-semibold text-gray-500">
+                  <div key={day} className="p-3 text-center text-sm font-semibold text-[#2A3A32]">
                     {day}
                   </div>
                 ))}
@@ -203,10 +203,10 @@ export default function Schedule() {
                     onClick={() => !day.isPast && day.isCurrentMonth && setSelectedDate(day.dateString)}
                     disabled={day.isPast || !day.isCurrentMonth}
                     className={`
-                      p-3 text-sm rounded-lg transition-all duration-200
-                      ${day.isCurrentMonth ? 'hover:bg-purple-50' : 'text-gray-300'}
-                      ${day.isSelected ? 'bg-purple-600 text-white' : ''}
-                      ${day.isToday ? 'bg-blue-100 text-blue-800 font-semibold' : ''}
+                      p-3 text-sm rounded-lg transition-all duration-200 font-medium
+                      ${day.isCurrentMonth ? 'hover:bg-[#CDE8D6]/30 text-[#1A2A22]' : 'text-gray-300'}
+                      ${day.isSelected ? 'bg-[#4A9AC7] text-white' : ''}
+                      ${day.isToday ? 'bg-[#B7E4F7] text-[#1A2A22] font-semibold' : ''}
                       ${day.isPast || !day.isCurrentMonth ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}
                     `}
                   >
@@ -222,7 +222,7 @@ export default function Schedule() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-8"
                 >
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Available Times</h3>
+                  <h3 className="text-xl font-bold text-[#1A2A22] mb-4">Available Times</h3>
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
                     {timeSlots.map((time) => (
                       <button
@@ -231,8 +231,8 @@ export default function Schedule() {
                         className={`
                           p-3 rounded-lg border text-sm font-medium transition-all duration-200
                           ${selectedTime === time 
-                            ? 'bg-purple-600 text-white border-purple-600' 
-                            : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:bg-purple-50'
+                            ? 'bg-[#4A9AC7] text-white border-[#4A9AC7]' 
+                            : 'bg-white text-[#2A3A32] border-gray-200 hover:border-[#A3DCEF] hover:bg-[#B7E4F7]/20'
                           }
                         `}
                       >
@@ -250,7 +250,7 @@ export default function Schedule() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-8"
                 >
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Choose Instructor</h3>
+                  <h3 className="text-xl font-bold text-[#1A2A22] mb-4">Choose Instructor</h3>
                   <div className="space-y-3">
                     {instructors.map((instructor) => (
                       <button
@@ -259,8 +259,8 @@ export default function Schedule() {
                         className={`
                           w-full p-4 rounded-lg border text-left transition-all duration-200
                           ${selectedInstructor === instructor.name
-                            ? 'bg-purple-600 text-white border-purple-600'
-                            : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:bg-purple-50'
+                            ? 'bg-[#4A9AC7] text-white border-[#4A9AC7]'
+                            : 'bg-white text-[#2A3A32] border-gray-200 hover:border-[#A3DCEF] hover:bg-[#B7E4F7]/20'
                           }
                         `}
                       >
@@ -290,26 +290,26 @@ export default function Schedule() {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-6 sticky top-24"
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Book Your Session</h2>
+              <h2 className="text-2xl font-bold text-[#1A2A22] mb-6">Book Your Session</h2>
               
               {/* Selection Summary */}
               {(selectedDate || selectedTime || selectedInstructor) && (
-                <div className="mb-6 p-4 bg-purple-50 rounded-lg">
-                  <h3 className="font-semibold text-purple-900 mb-2">Your Selection:</h3>
+                <div className="mb-6 p-4 bg-[#B7E4F7]/20 rounded-lg">
+                  <h3 className="font-semibold text-[#1A2A22] mb-2">Your Selection:</h3>
                   {selectedDate && (
-                    <div className="flex items-center space-x-2 text-sm text-purple-700 mb-1">
+                    <div className="flex items-center space-x-2 text-sm text-[#2A3A32] mb-1">
                       <CalendarIcon className="h-4 w-4" />
                       <span>{new Date(selectedDate).toLocaleDateString()}</span>
                     </div>
                   )}
                   {selectedTime && (
-                    <div className="flex items-center space-x-2 text-sm text-purple-700 mb-1">
+                    <div className="flex items-center space-x-2 text-sm text-[#2A3A32] mb-1">
                       <Clock className="h-4 w-4" />
                       <span>{selectedTime}</span>
                     </div>
                   )}
                   {selectedInstructor && (
-                    <div className="flex items-center space-x-2 text-sm text-purple-700">
+                    <div className="flex items-center space-x-2 text-sm text-[#2A3A32]">
                       <User className="h-4 w-4" />
                       <span>{selectedInstructor}</span>
                     </div>
@@ -319,18 +319,18 @@ export default function Schedule() {
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                  <label className="block text-sm font-medium text-[#1A2A22] mb-2">Name *</label>
                   <input
                     {...register('name', { required: 'Name is required' })}
                     type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A9AC7] focus:border-[#4A9AC7] text-[#1A2A22]"
                     placeholder="Your full name"
                   />
                   {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                  <label className="block text-sm font-medium text-[#1A2A22] mb-2">Email *</label>
                   <input
                     {...register('email', { 
                       required: 'Email is required',
@@ -340,28 +340,28 @@ export default function Schedule() {
                       }
                     })}
                     type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A9AC7] focus:border-[#4A9AC7] text-[#1A2A22]"
                     placeholder="your@email.com"
                   />
                   {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
+                  <label className="block text-sm font-medium text-[#1A2A22] mb-2">Phone *</label>
                   <input
                     {...register('phone', { required: 'Phone is required' })}
                     type="tel"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A9AC7] focus:border-[#4A9AC7] text-[#1A2A22]"
                     placeholder="(555) 123-4567"
                   />
                   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Service *</label>
+                  <label className="block text-sm font-medium text-[#1A2A22] mb-2">Service *</label>
                   <select
                     {...register('service', { required: 'Please select a service' })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A9AC7] focus:border-[#4A9AC7] text-[#1A2A22]"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -372,30 +372,30 @@ export default function Schedule() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Special Notes</label>
+                  <label className="block text-sm font-medium text-[#1A2A22] mb-2">Special Notes</label>
                   <textarea
                     {...register('notes')}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A9AC7] focus:border-[#4A9AC7] text-[#1A2A22]"
                     placeholder="Any specific needs or questions..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-teal-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-[#4A9AC7] to-[#5A8A6A] text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50"
                   disabled={!selectedDate || !selectedTime || !selectedInstructor}
                 >
                   Book Session
                 </button>
               </form>
 
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+              <div className="mt-6 p-4 bg-[#FAF9F6] rounded-lg">
                 <div className="flex items-start space-x-2">
-                  <MapPin className="h-5 w-5 text-gray-400 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-[#5A8A6A] mt-0.5" />
                   <div>
-                    <div className="font-semibold text-gray-900">Location</div>
-                    <div className="text-sm text-gray-600">
+                    <div className="font-semibold text-[#1A2A22]">Location</div>
+                    <div className="text-sm text-[#2A3A32]">
                       123 Healing Lane<br />
                       Wellness City, WC 12345
                     </div>

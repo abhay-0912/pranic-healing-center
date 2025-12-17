@@ -49,19 +49,19 @@ const stats = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#FAF9F6] to-[#F4F1EC]">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 py-20">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative bg-gradient-to-br from-[#CDE8D6] via-[#B7E4F7] to-[#E6D9F2] py-20">
+        <div className="absolute inset-0 bg-white/10" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl font-bold text-white mb-6"
+            className="text-5xl sm:text-6xl font-bold text-[#1A2A22] mb-6"
           >
             About{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#5A8A6A] via-[#4A9AC7] to-[#8B7BA8] bg-clip-text text-transparent">
               Pranic Healing
             </span>
           </motion.h1>
@@ -69,15 +69,14 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-3xl mx-auto"
-          >
+            className="text-xl text-[#2A3A32]/90 max-w-3xl mx-auto">
             Discover the ancient art of energy healing that has transformed millions of lives worldwide
           </motion.p>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-b from-[#FAF9F6] to-[#CDE8D6]/20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -88,11 +87,11 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-purple-600" />
+                <div className="w-16 h-16 bg-[#A8D5BA]/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-[#5A8A6A]" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-3xl font-bold text-[#2A3A32] mb-2">{stat.value}</div>
+                <div className="text-[#2A3A32]/70">{stat.label}</div>
               </motion.div>
             ))}
           </div>
