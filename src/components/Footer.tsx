@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-6 text-[#b8d4e8]">
-              Part of MCKS Yoga Vidya Pranic Healing Trust of UP Lucknow. Spreading Master Choa Kok Sui's teachings of energy healing and spiritual development across Lucknow.
+              Part of MCKS Yoga Vidya Pranic Healing Trust of UP Lucknow. Spreading Master Choa Kok Sui&apos;s teachings of energy healing and spiritual development across Lucknow.
             </p>
             <p className="text-xs text-[#7fa9c9]">
               Affiliated with World Pranic Healing Foundation

@@ -76,7 +76,7 @@ export default function Contact() {
             className="text-xl text-[#c5dff0] max-w-3xl mx-auto"
           >
             Have questions about our Pranic Healing courses? Ready to start your healing journey?
-            Contact us - we're here to help!
+            Contact us - we&apos;re here to help!
           </motion.p>
         </div>
       </section>
