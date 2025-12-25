@@ -9,13 +9,25 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Schedule', href: '/schedule' },
-  { name: 'Benefits', href: '/benefits' },
+  { name: 'Resources', href: '/benefits' },
+  { name: 'Dashboard', href: '/dashboard' },
   { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [highContrast, setHighContrast] = useState(false)
+
+  const toggleContrast = () => {
+    setHighContrast((v) => {
+      const next = !v
+      const body = document.querySelector('body')
+      if (body) {
+        body.classList.toggle('hc', next)
+      }
+      return next
+    })
+  }
 
   return (
     <header className="bg-[#faf7f2] shadow-md sticky top-0 z-50 border-b border-[#e0d4cc]">
@@ -50,7 +62,15 @@ export default function Header() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-3">
+          <button
+            aria-pressed={highContrast}
+            aria-label="Toggle high contrast mode"
+            onClick={toggleContrast}
+            className={`rounded-md px-3.5 py-2.5 text-sm font-semibold border ${highContrast ? 'bg-black text-white border-black' : 'bg-white text-[#3d5c4c] border-[#e0d4cc]'} transition-all`}
+          >
+            High Contrast
+          </button>
           <Link
             href="/schedule"
             className="rounded-md bg-[#c982d8] px-3.5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#b86cc8] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c982d8] transition-all"
@@ -110,10 +130,16 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  <div className="py-6">
+                  <div className="py-6 flex items-center gap-3">
+                    <button
+                      onClick={toggleContrast}
+                      className="block rounded-md bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-[#3d5c4c] border border-[#e0d4cc]"
+                    >
+                      High Contrast
+                    </button>
                     <Link
                       href="/schedule"
-                      className="block rounded-md bg-purple-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-purple-500 transition-colors"
+                      className="block rounded-md bg-[#c982d8] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#b86cc8] transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Book Session

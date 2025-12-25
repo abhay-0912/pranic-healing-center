@@ -44,3 +44,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* High contrast mode */
+body.hc {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+body.hc a, body.hc button {
+  outline: 2px solid #ffffff;
+}

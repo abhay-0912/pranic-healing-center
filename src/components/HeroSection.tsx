@@ -21,23 +21,31 @@ const trustIndicators = [
 export default function HeroSection() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Solid background */}
-      <div className="absolute inset-0 bg-[#5a8f6f]">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#3d5c4c]/10 to-transparent" />
-      </div>
+      {/* Calming background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/videos/water.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-label="Calming background video of flowing water"
+      />
+      {/* Soft gradient overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0e1a14]/60 via-[#0e1a14]/40 to-transparent" />
 
-      {/* Floating animated orbs */}
+      {/* Floating animated orbs (circular energy motifs) */}
       {floatingOrbs.map((orb) => (
         <motion.div
           key={orb.id}
-          className={`absolute ${orb.size} ${orb.color} rounded-full opacity-20 blur-xl`}
+          className={`absolute ${orb.size} ${orb.color} rounded-full opacity-25 blur-2xl`}
           animate={{
-            x: [0, 100, -50, 0],
-            y: [0, -100, 50, 0],
-            scale: [1, 1.2, 0.8, 1],
+            x: [0, 80, -40, 0],
+            y: [0, -80, 40, 0],
+            scale: [1, 1.15, 0.9, 1],
           }}
           transition={{
-            duration: 20,
+            duration: 24,
             delay: orb.delay,
             repeat: Infinity,
             ease: "linear"
@@ -50,16 +58,16 @@ export default function HeroSection() {
       ))}
 
       {/* Hero content */}
-      <div className="relative z-10 text-center px-6 sm:px-12 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 sm:px-12 max-w-5xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6"
         >
-          Transform Your Life with{' '}
-          <span className="text-[#f0dd99]">
-            Pranic Energy
+          Find Calm. Heal Deeply.
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#c982d8] via-[#6fa3d6] to-[#f0dd99]">
+            Pranic Energy in Motion
           </span>
         </motion.h1>
 
@@ -67,10 +75,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl sm:text-2xl text-gray-200 mb-8 leading-relaxed"
+          className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed"
         >
-          Discover the ancient wisdom of energy healing combined with modern techniques. 
-          Experience profound transformation through certified Pranic Healing sessions.
+          Guided meditations, effortless booking, and a personalized dashboard to track your healing journey. Designed with accessibility and serenity.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -78,39 +85,44 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
         >
           <Link
             href="/schedule"
-            className="bg-[#c982d8] hover:bg-[#b86cc8] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            aria-label="Book a healing session"
+            className="px-8 py-4 rounded-full text-lg font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all bg-gradient-to-r from-[#5a8f6f] to-[#6fa3d6]"
           >
-            Start Your Healing Journey
+            Book a Session
           </Link>
           <Link
             href="/benefits"
-            className="bg-white/25 hover:bg-white/35 text-white border-2 border-white/40 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 backdrop-blur-sm hover:scale-105"
+            aria-label="Start a guided meditation"
+            className="px-8 py-4 rounded-full text-lg font-semibold text-[#0e1a14] bg-white/90 hover:bg-white transition-all"
           >
-            Join Free Meditation
+            Start Guided Meditation
           </Link>
         </motion.div>
 
-        {/* Trust indicators */}
+        {/* Trust indicators in circular rings */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white"
+          className="flex flex-wrap items-center justify-center gap-6"
         >
           {trustIndicators.map((indicator, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span className="text-sm font-medium">{indicator}</span>
+            <div key={index} className="flex items-center gap-3">
+              <div className="relative w-10 h-10">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#c982d8] via-[#6fa3d6] to-[#f0dd99] opacity-60" />
+                <div className="absolute inset-[3px] rounded-full bg-white/90 flex items-center justify-center">
+                  <CheckCircle className="h-5 w-5 text-[#5a8f6f]" />
+                </div>
+              </div>
+              <span className="text-sm font-medium text-white/90">{indicator}</span>
             </div>
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll indicator removed */}
     </div>
   )
 }
