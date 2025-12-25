@@ -28,9 +28,9 @@ const values = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#faf7f2]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-[#5a8f6f] text-white py-16 sm:py-20 lg:py-24">
+      <div className="bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -109,8 +109,16 @@ export default function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-[#f0f5fb]">
-                  <value.icon className="h-8 w-8 text-[#5a8f6f]" />
+                <div className="flex justify-center mb-4">
+                  <div
+                    className="w-16 h-16 rounded-full flex items-center justify-center border-2"
+                    style={{
+                      background: `linear-gradient(135deg, ${'#5a8f6f'}20 0%, ${'#5a8f6f'}10 100%)`,
+                      borderColor: `${'#5a8f6f'}30`
+                    }}
+                  >
+                    <value.icon className="h-8 w-8 text-[#5a8f6f]" />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#3d5c4c] mb-2">
                   {value.title}
@@ -128,45 +136,45 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="bg-[#c982d8] text-white rounded-2xl p-8 sm:p-12"
+          className="bg-gradient-to-br from-[#f0ead2] via-white to-[#e5c4f0]/40 rounded-3xl p-8 sm:p-12 border border-[#e0d4cc]"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#3d5c4c] mb-8">
             Why Choose Our Center?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center">
-                <span className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center mr-3">✓</span>
+              <h3 className="text-xl font-bold text-[#3d5c4c] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-[#5a8f6f] rounded-full flex items-center justify-center text-white text-sm mr-3 font-bold">✓</span>
                 Certified Instructors
               </h3>
-              <p className="text-white/90">
+              <p className="text-[#3d5c4c]">
                 Our instructors are trained and certified by the official World Pranic Healing Foundation
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center">
-                <span className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center mr-3">✓</span>
+              <h3 className="text-xl font-bold text-[#3d5c4c] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-[#5a8f6f] rounded-full flex items-center justify-center text-white text-sm mr-3 font-bold">✓</span>
                 Proven Methods
               </h3>
-              <p className="text-white/90">
+              <p className="text-[#3d5c4c]">
                 We teach the authentic methods of Master Choa Kok Sui
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center">
-                <span className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center mr-3">✓</span>
+              <h3 className="text-xl font-bold text-[#3d5c4c] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-[#5a8f6f] rounded-full flex items-center justify-center text-white text-sm mr-3 font-bold">✓</span>
                 Personal Support
               </h3>
-              <p className="text-white/90">
+              <p className="text-[#3d5c4c]">
                 One-on-one guidance and personalized healing sessions available
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center">
-                <span className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center mr-3">✓</span>
+              <h3 className="text-xl font-bold text-[#3d5c4c] mb-3 flex items-center">
+                <span className="w-8 h-8 bg-[#5a8f6f] rounded-full flex items-center justify-center text-white text-sm mr-3 font-bold">✓</span>
                 Global Community
               </h3>
-              <p className="text-white/90">
+              <p className="text-[#3d5c4c]">
                 Connect with the worldwide Pranic Healing community
               </p>
             </div>

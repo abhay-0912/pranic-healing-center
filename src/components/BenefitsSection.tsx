@@ -63,22 +63,19 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#faf7f2]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-14 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3d5c4c] mb-4">
-            Transform Your Life with{' '}
-            <span className="text-[#5a8f6f]">
-              Pranic Healing
-            </span>
+            Healing Benefits
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-[#3d5c4c] max-w-3xl mx-auto px-4">
-            Experience the profound benefits of energy healing and unlock your body&apos;s natural ability to heal itself
+          <p className="text-base sm:text-lg text-[#5a8f6f] max-w-3xl mx-auto">
+            Discover what energy healing can bring to your body, mind, and spirit.
           </p>
         </motion.div>
 
@@ -88,33 +85,24 @@ export default function BenefitsSection() {
               key={benefit.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.05,
-                transition: { duration: 0.2 }
-              }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
               className="group relative"
             >
-              {/* Glassmorphism card */}
-              <div className="relative bg-white/70 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-                {/* Background gradient on hover */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`} style={{ backgroundColor: benefit.color }} />
-                
-                {/* Icon container */}
-                <div className={`relative w-16 h-16 ${benefit.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <benefit.icon className={`h-8 w-8 ${benefit.iconColor}`} />
+              <div className="relative bg-gradient-to-br from-white to-[#f0ead2]/30 border border-[#e0d4cc] rounded-2xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
+                {/* Circular icon container */}
+                <div className="relative w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: `linear-gradient(135deg, ${benefit.color}20 0%, ${benefit.color}10 100%)` }}>
+                  <div className="absolute inset-[3px] rounded-full flex items-center justify-center border-2" style={{ borderColor: `${benefit.color}30` }}>
+                    <benefit.icon className="h-8 w-8" style={{ color: benefit.color }} />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-[#3d5c4c] mb-3 group-hover:text-[#2d2d2d] transition-colors">
+                <h3 className="text-xl font-bold text-[#3d5c4c] mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-[#3d5c4c] leading-relaxed">
+                <p className="text-[#5a8f6f] leading-relaxed text-sm">
                   {benefit.description}
                 </p>
-
-                {/* Hover effect border */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300 -z-10 blur-xl`} style={{ backgroundColor: benefit.color }} />
               </div>
             </motion.div>
           ))}

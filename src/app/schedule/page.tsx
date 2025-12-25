@@ -130,9 +130,9 @@ export default function Schedule() {
     "July", "August", "September", "October", "November", "December"]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 py-16">
+      <section className="bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -140,10 +140,7 @@ export default function Schedule() {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-5xl font-bold text-white mb-4"
           >
-            Book Your{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-              Healing Session
-            </span>
+            Book Your Healing Session
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -204,9 +201,9 @@ export default function Schedule() {
                     disabled={day.isPast || !day.isCurrentMonth}
                     className={`
                       p-3 text-sm rounded-lg transition-all duration-200
-                      ${day.isCurrentMonth ? 'hover:bg-purple-50' : 'text-gray-300'}
-                      ${day.isSelected ? 'bg-purple-600 text-white' : ''}
-                      ${day.isToday ? 'bg-blue-100 text-blue-800 font-semibold' : ''}
+                      ${day.isCurrentMonth ? 'hover:bg-[#f0ead2]' : 'text-gray-300'}
+                      ${day.isSelected ? 'bg-[#5a8f6f] text-white' : ''}
+                      ${day.isToday ? 'bg-[#6fa3d6]/20 text-[#3d5c4c] font-semibold' : ''}
                       ${day.isPast || !day.isCurrentMonth ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}
                     `}
                   >
@@ -229,10 +226,10 @@ export default function Schedule() {
                         key={time}
                         onClick={() => setSelectedTime(time)}
                         className={`
-                          p-3 rounded-lg border text-sm font-medium transition-all duration-200
+                          p-3 rounded-full border text-sm font-medium transition-all duration-200
                           ${selectedTime === time 
-                            ? 'bg-purple-600 text-white border-purple-600' 
-                            : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:bg-purple-50'
+                            ? 'bg-[#5a8f6f] text-white border-[#5a8f6f]' 
+                            : 'bg-white text-[#3d5c4c] border-[#e0d4cc] hover:border-[#5a8f6f] hover:bg-[#f0ead2]'
                           }
                         `}
                       >
@@ -257,10 +254,10 @@ export default function Schedule() {
                         key={instructor.name}
                         onClick={() => setSelectedInstructor(instructor.name)}
                         className={`
-                          w-full p-4 rounded-lg border text-left transition-all duration-200
+                          w-full p-4 rounded-2xl border text-left transition-all duration-200
                           ${selectedInstructor === instructor.name
-                            ? 'bg-purple-600 text-white border-purple-600'
-                            : 'bg-white text-gray-700 border-gray-200 hover:border-purple-300 hover:bg-purple-50'
+                            ? 'bg-[#5a8f6f] text-white border-[#5a8f6f]'
+                            : 'bg-white text-[#3d5c4c] border-[#e0d4cc] hover:border-[#5a8f6f] hover:bg-[#f0ead2]'
                           }
                         `}
                       >
@@ -294,10 +291,10 @@ export default function Schedule() {
               
               {/* Selection Summary */}
               {(selectedDate || selectedTime || selectedInstructor) && (
-                <div className="mb-6 p-4 bg-purple-50 rounded-lg">
-                  <h3 className="font-semibold text-purple-900 mb-2">Your Selection:</h3>
+                <div className="mb-6 p-4 bg-[#f0ead2] rounded-2xl border border-[#e0d4cc]">
+                  <h3 className="font-semibold text-[#3d5c4c] mb-2">Your Selection:</h3>
                   {selectedDate && (
-                    <div className="flex items-center space-x-2 text-sm text-purple-700 mb-1">
+                    <div className="flex items-center space-x-2 text-sm text-[#5a8f6f] mb-1">
                       <CalendarIcon className="h-4 w-4" />
                       <span>{new Date(selectedDate).toLocaleDateString()}</span>
                     </div>
@@ -383,7 +380,7 @@ export default function Schedule() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-teal-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+                  className="w-full bg-[#5a8f6f] text-white py-3 rounded-full font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300 disabled:opacity-50"
                   disabled={!selectedDate || !selectedTime || !selectedInstructor}
                 >
                   Book Session

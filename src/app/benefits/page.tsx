@@ -176,8 +176,14 @@ export default function Benefits() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                <Heart className="h-8 w-8 text-white" />
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mb-6 border-2"
+                style={{
+                  background: `linear-gradient(135deg, #5a8f6f20 0%, #5a8f6f10 100%)`,
+                  borderColor: `#5a8f6f30`
+                }}
+              >
+                <Heart className="h-8 w-8 text-[#5a8f6f]" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Physical Benefits</h3>
               <ul className="space-y-3">
@@ -197,8 +203,14 @@ export default function Benefits() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <Brain className="h-8 w-8 text-white" />
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mb-6 border-2"
+                style={{
+                  background: `linear-gradient(135deg, #6fa3d620 0%, #6fa3d610 100%)`,
+                  borderColor: `#6fa3d630`
+                }}
+              >
+                <Brain className="h-8 w-8 text-[#6fa3d6]" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Mental Benefits</h3>
               <ul className="space-y-3">
@@ -218,8 +230,14 @@ export default function Benefits() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-white" />
+              <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mb-6 border-2"
+                style={{
+                  background: `linear-gradient(135deg, #c982d820 0%, #c982d810 100%)`,
+                  borderColor: `#c982d830`
+                }}
+              >
+                <Zap className="h-8 w-8 text-[#c982d8]" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Spiritual Benefits</h3>
               <ul className="space-y-3">
@@ -333,17 +351,17 @@ export default function Benefits() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-teal-600">
+      <section className="py-20 bg-gradient-to-b from-[#f0ead2] to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-[#3d5c4c] mb-6">
               Ready to Experience These Benefits?
             </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-[#5a8f6f] mb-8 max-w-3xl mx-auto">
               Join thousands who have transformed their lives through Pranic Healing. 
               Your journey to wellness starts today.
             </p>
@@ -352,7 +370,7 @@ export default function Benefits() {
                 href="/schedule"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+                className="bg-[#5a8f6f] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Book Your First Session
               </motion.a>
@@ -360,7 +378,7 @@ export default function Benefits() {
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/30 transition-colors duration-300"
+                className="bg-white text-[#5a8f6f] border-2 border-[#5a8f6f] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#f0ead2] transition-all duration-300"
               >
                 Free Consultation
               </motion.a>

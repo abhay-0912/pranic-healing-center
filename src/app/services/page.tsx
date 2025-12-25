@@ -45,9 +45,9 @@ const courses = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-[#faf7f2]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-[#5a8f6f] text-white py-16 sm:py-20 lg:py-24">
+      <div className="bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -58,7 +58,7 @@ export default function Services() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Our Courses & Programs
             </h1>
-            <p className="text-lg sm:text-xl text-[#c5dff0] max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto">
               Discover our comprehensive range of Pranic Healing courses designed for all levels
             </p>
           </motion.div>
@@ -77,9 +77,11 @@ export default function Services() {
               className="group relative"
             >
               <div className="relative h-full bg-white rounded-2xl shadow-md hover:shadow-lg border border-[#e0d4cc] transition-all duration-300 p-8">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300" style={{ backgroundColor: `${course.color}20` }}>
-                  <course.icon className="h-7 w-7" style={{ color: course.color }} />
+                {/* Circular icon */}
+                <div className="relative w-20 h-20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: `linear-gradient(135deg, ${course.color}20 0%, ${course.color}10 100%)` }}>
+                  <div className="absolute inset-[3px] rounded-full flex items-center justify-center border-2" style={{ borderColor: `${course.color}30` }}>
+                    <course.icon className="h-8 w-8" style={{ color: course.color }} />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -115,8 +117,8 @@ export default function Services() {
                 {/* CTA */}
                 <Link
                   href="/contact"
-                  className="inline-block text-sm font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
-                  style={{ backgroundColor: course.color, color: 'white' }}
+                  className="inline-block px-6 py-2 rounded-full font-semibold text-white transition-all hover:scale-105"
+                  style={{ backgroundColor: course.color }}
                 >
                   Enroll Now
                 </Link>
@@ -133,11 +135,11 @@ export default function Services() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-[#3d5c4c] mb-6">
-            Want to explore all courses in detail?
+            Ready to begin your healing path?
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 shadow-md"
+            className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 shadow-md"
             style={{ backgroundColor: '#5a8f6f' }}
           >
             Contact Us for Schedule & Registration

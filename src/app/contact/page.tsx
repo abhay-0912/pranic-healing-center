@@ -57,9 +57,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-[#faf7f2]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#5a8f6f] py-20">
+      <section className="relative bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -100,7 +100,13 @@ export default function Contact() {
 
               {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#5a8f6f]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+                  style={{
+                    background: `linear-gradient(135deg, #5a8f6f20 0%, #5a8f6f10 100%)`,
+                    borderColor: `#5a8f6f30`
+                  }}
+                >
                   <MapPin className="h-6 w-6 text-[#5a8f6f]" />
                 </div>
                 <div>
@@ -114,7 +120,13 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#6fa3d6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+                  style={{
+                    background: `linear-gradient(135deg, #6fa3d620 0%, #6fa3d610 100%)`,
+                    borderColor: `#6fa3d630`
+                  }}
+                >
                   <Phone className="h-6 w-6 text-[#6fa3d6]" />
                 </div>
                 <div>
@@ -127,7 +139,13 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#c982d8]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+                  style={{
+                    background: `linear-gradient(135deg, #c982d820 0%, #c982d810 100%)`,
+                    borderColor: `#c982d830`
+                  }}
+                >
                   <Mail className="h-6 w-6 text-[#c982d8]" />
                 </div>
                 <div>
@@ -140,7 +158,13 @@ export default function Contact() {
 
               {/* Hours */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#ddc743]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+                  style={{
+                    background: `linear-gradient(135deg, #ddc74320 0%, #ddc74310 100%)`,
+                    borderColor: `#ddc74330`
+                  }}
+                >
                   <Clock className="h-6 w-6 text-[#ddc743]" />
                 </div>
                 <div>
@@ -321,12 +345,12 @@ export default function Contact() {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   className={`
-                    w-full bg-[#5a8f6f] text-white py-4 rounded-lg font-semibold 
+                    w-full bg-[#5a8f6f] text-white py-4 rounded-full font-semibold 
                     transition-all duration-300 flex items-center justify-center space-x-2
-                    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3d5c4c]'}
+                    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 hover:shadow-lg'}
                   `}
                 >
                   {isSubmitting ? (
