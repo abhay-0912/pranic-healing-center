@@ -36,7 +36,7 @@ export default function BookingWidget() {
   }
 
   return (
-    <section aria-labelledby="booking-title" className="bg-white rounded-2xl shadow-md border border-[#e0d4cc] overflow-hidden">
+    <section id="booking" aria-labelledby="booking-title" className="bg-white rounded-2xl shadow-md border border-[#e0d4cc] overflow-hidden">
       {/* Progress bar */}
       <div className="h-2 bg-[#f0ead2]">
         <div

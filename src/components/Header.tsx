@@ -9,8 +9,8 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Resources', href: '/benefits' },
-  { name: 'Dashboard', href: '/dashboard' },
+  { name: 'Benefits', href: '/benefits' },
+  { name: 'My Progress', href: '/dashboard' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -71,12 +71,12 @@ export default function Header() {
           >
             High Contrast
           </button>
-          <Link
-            href="/schedule"
+          <a
+            href="#booking"
             className="rounded-md bg-[#c982d8] px-3.5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#b86cc8] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c982d8] transition-all"
           >
             Book Session
-          </Link>
+          </a>
         </div>
       </nav>
       
@@ -137,13 +137,13 @@ export default function Header() {
                     >
                       High Contrast
                     </button>
-                    <Link
-                      href="/schedule"
+                    <a
+                      href="#booking"
                       className="block rounded-md bg-[#c982d8] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#b86cc8] transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Book Session
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
