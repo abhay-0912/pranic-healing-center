@@ -75,8 +75,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/schedule" className="text-sm leading-6 text-[#b8d4e8] hover:text-white transition-colors">
-                    Schedule
+                  <Link href="/services" className="text-sm leading-6 text-[#b8d4e8] hover:text-white transition-colors">
+                    Services
                   </Link>
                 </li>
                 <li>

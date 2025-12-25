@@ -11,7 +11,7 @@ const actionCards = [
     icon: Calendar,
     color: '#5a8f6f',
     buttonText: 'Book Now',
-    href: '/schedule',
+    href: '#booking',
     delay: 0
   },
   {
@@ -28,15 +28,15 @@ const actionCards = [
     description: 'Participate in group healing sessions and learn self-healing techniques',
     icon: Star,
     color: '#6fa3d6',
-    buttonText: 'View Schedule',
-    href: '/schedule',
+    buttonText: 'View Programs',
+    href: '/services',
     delay: 0.4
   }
 ]
 
 export default function ActionCardsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-[#faf7f2]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#faf7f2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

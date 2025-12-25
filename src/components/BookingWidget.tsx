@@ -40,7 +40,7 @@ export default function BookingWidget() {
       {/* Progress bar */}
       <div className="h-2 bg-[#f0ead2]">
         <div
-          className="h-full bg-gradient-to-r from-[#5a8f6f] via-[#6fa3d6] to-[#c982d8]"
+          className="h-full bg-[#5a8f6f]"
           style={{ width: `${progress}%` }}
           aria-hidden="true"
         />

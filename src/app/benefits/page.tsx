@@ -367,7 +367,7 @@ export default function Benefits() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="/schedule"
+                href="#booking"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#5a8f6f] text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300"

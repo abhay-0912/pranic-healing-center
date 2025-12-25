@@ -30,7 +30,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] text-white py-16 sm:py-20 lg:py-24">
+      <div className="bg-[#5a8f6f] text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

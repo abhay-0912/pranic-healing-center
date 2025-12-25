@@ -31,8 +31,8 @@ export default function HeroSection() {
         playsInline
         aria-label="Calming background video of flowing water"
       />
-      {/* Soft gradient overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0e1a14]/60 via-[#0e1a14]/40 to-transparent" />
+      {/* Soft solid overlay for readability */}
+      <div className="absolute inset-0 bg-[#0e1a14]/40" />
 
       {/* Floating animated orbs (circular energy motifs) */}
       {floatingOrbs.map((orb) => (
@@ -66,7 +66,7 @@ export default function HeroSection() {
           className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6"
         >
           Find Calm. Heal Deeply.
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#c982d8] via-[#6fa3d6] to-[#f0dd99]">
+          <span className="block text-white">
             Pranic Energy in Motion
           </span>
         </motion.h1>
@@ -77,7 +77,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed"
         >
-          Guided meditations, effortless booking, and a personalized dashboard to track your healing journey. Designed with accessibility and serenity.
+          Guided meditations and effortless booking with Lucknow&apos;s Pranic Healing Center. Designed for serenity and ease.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -87,13 +87,13 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
         >
-          <Link
-            href="/schedule"
+          <a
+            href="#booking"
             aria-label="Book a healing session"
-            className="px-8 py-4 rounded-full text-lg font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all bg-gradient-to-r from-[#5a8f6f] to-[#6fa3d6]"
+            className="px-8 py-4 rounded-full text-lg font-semibold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all bg-[#5a8f6f]"
           >
             Book a Session
-          </Link>
+          </a>
           <Link
             href="/benefits"
             aria-label="Start a guided meditation"
@@ -113,8 +113,8 @@ export default function HeroSection() {
           {trustIndicators.map((indicator, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className="relative w-10 h-10">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#c982d8] via-[#6fa3d6] to-[#f0dd99] opacity-60" />
-                <div className="absolute inset-[3px] rounded-full bg-white/90 flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full bg-[#f0ead2]/60" />
+                <div className="absolute inset-[3px] rounded-full bg-white flex items-center justify-center">
                   <CheckCircle className="h-5 w-5 text-[#5a8f6f]" />
                 </div>
               </div>

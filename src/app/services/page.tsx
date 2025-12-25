@@ -47,7 +47,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#5a8f6f] to-[#3d5c4c] text-white py-16 sm:py-20 lg:py-24">
+      <div className="bg-[#5a8f6f] text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -135,14 +135,14 @@ export default function Services() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-[#3d5c4c] mb-6">
-            Ready to begin your healing path?
+            Ready to begin your healing path in Lucknow?
           </p>
           <Link
             href="/contact"
             className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 shadow-md"
             style={{ backgroundColor: '#5a8f6f' }}
           >
-            Contact Us for Schedule & Registration
+            Contact Us for Dates & Registration
           </Link>
         </motion.div>
       </div>

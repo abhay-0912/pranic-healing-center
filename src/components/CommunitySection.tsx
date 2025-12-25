@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     name: 'Meera',
-    text: 'Pranic Healing sessions reduced my stress significantly. The dashboard keeps me motivated every week.',
+    text: 'Pranic Healing sessions reduced my stress significantly. The simple routine keeps me motivated every week.',
     city: 'Lucknow'
   },
   {
