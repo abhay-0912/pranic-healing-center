@@ -9,7 +9,7 @@ const actionCards = [
     title: 'Book a Session',
     description: 'Schedule your personal healing session with our certified Pranic Healing instructors',
     icon: Calendar,
-    gradient: 'from-green-500 to-emerald-600',
+    color: '#5a8f6f',
     buttonText: 'Book Now',
     href: '/schedule',
     delay: 0
@@ -18,7 +18,7 @@ const actionCards = [
     title: 'Free Consultation',
     description: 'Get personalized guidance and learn which healing approach is right for you',
     icon: MessageCircle,
-    gradient: 'from-yellow-500 to-orange-600',
+    color: '#ddc743',
     buttonText: 'Schedule Call',
     href: '/contact',
     delay: 0.2
@@ -27,7 +27,7 @@ const actionCards = [
     title: 'Join Workshop',
     description: 'Participate in group healing sessions and learn self-healing techniques',
     icon: Star,
-    gradient: 'from-blue-500 to-cyan-600',
+    color: '#6fa3d6',
     buttonText: 'View Schedule',
     href: '/schedule',
     delay: 0.4
@@ -36,7 +36,7 @@ const actionCards = [
 
 export default function ActionCardsSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#f0ead2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,13 +44,13 @@ export default function ActionCardsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3d5c4c] mb-4">
             Ready to Begin Your{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-teal-600 bg-clip-text text-transparent">
+            <span className="text-[#5a8f6f]">
               Healing Journey?
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-[#3d5c4c] max-w-3xl mx-auto px-4">
             Choose the path that resonates with you and take the first step towards transformation
           </p>
         </motion.div>
@@ -69,8 +69,8 @@ export default function ActionCardsSection() {
               className="group relative"
             >
               <div className="relative h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-90`} />
+                {/* Solid background */}
+                <div className={`absolute inset-0`} style={{ backgroundColor: card.color }} />
                 
                 {/* Content */}
                 <div className="relative z-10 p-8 h-full flex flex-col text-white">

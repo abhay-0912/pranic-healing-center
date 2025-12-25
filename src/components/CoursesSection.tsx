@@ -43,30 +43,24 @@ const courses = [
   }
 ]
 
-export default function Services() {
+export default function CoursesSection() {
   return (
-    <div className="min-h-screen bg-[#faf7f2]">
-      {/* Hero Section */}
-      <div className="bg-[#5a8f6f] text-white py-16 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Our Courses & Programs
-            </h1>
-            <p className="text-lg sm:text-xl text-[#c5dff0] max-w-3xl mx-auto">
-              Discover our comprehensive range of Pranic Healing courses designed for all levels
-            </p>
-          </motion.div>
-        </div>
-      </div>
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3d5c4c] mb-4">
+            Our Courses & Programs
+          </h2>
+          <p className="text-base sm:text-lg lg:text-xl text-[#3d5c4c] max-w-3xl mx-auto px-4">
+            Discover our comprehensive range of Pranic Healing courses designed for all levels
+          </p>
+        </motion.div>
 
-      {/* Courses */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {courses.map((course, index) => (
             <motion.div
@@ -118,7 +112,7 @@ export default function Services() {
                   className="inline-block text-sm font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
                   style={{ backgroundColor: course.color, color: 'white' }}
                 >
-                  Enroll Now
+                  Learn More
                 </Link>
               </div>
             </motion.div>
@@ -144,6 +138,6 @@ export default function Services() {
           </Link>
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -26,18 +26,18 @@ type ContactForm = {
 }
 
 const inquiryTypes = [
-  'General Information',
-  'Session Booking',
-  'Group Workshops',
-  'Corporate Wellness',
-  'Instructor Training',
-  'Partnership Opportunities'
+  'Basic Pranic Healing Course',
+  'Intermediate Course Inquiry',
+  'Twin Hearts Meditation',
+  'Arhatic Yoga Program',
+  'Private Healing Session',
+  'General Information'
 ]
 
 const operatingHours = [
-  { day: 'Monday - Friday', hours: '9:00 AM - 7:00 PM' },
-  { day: 'Saturday', hours: '9:00 AM - 5:00 PM' },
-  { day: 'Sunday', hours: '10:00 AM - 4:00 PM' },
+  { day: 'Monday - Friday', hours: '10:00 AM - 6:00 PM' },
+  { day: 'Saturday', hours: '10:00 AM - 4:00 PM' },
+  { day: 'Sunday', hours: '4:00 PM - 6:00 PM' },
   { day: 'Holidays', hours: 'By Appointment Only' }
 ]
 
@@ -57,30 +57,26 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#faf7f2]">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-teal-600 py-20">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <section className="relative bg-[#5a8f6f] py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-6xl font-bold text-white mb-6"
           >
-            Get in{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-              Touch
-            </span>
+            Get in Touch
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-3xl mx-auto"
+            className="text-xl text-[#c5dff0] max-w-3xl mx-auto"
           >
-            Have questions about Pranic Healing? Ready to start your wellness journey? 
-            We&apos;re here to help and guide you.
+            Have questions about our Pranic Healing courses? Ready to start your healing journey?
+            Contact us - we're here to help!
           </motion.p>
         </div>
       </section>
@@ -96,68 +92,62 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                <p className="text-gray-600 leading-relaxed">
-                  Reach out to us through any of the channels below. Our friendly team is 
-                  ready to assist you on your healing journey.
+                <h2 className="text-3xl font-bold text-[#3d5c4c] mb-6">Contact Information</h2>
+                <p className="text-[#5a8f6f] leading-relaxed">
+                  Reach out to us through any of the channels below. Our team at MCKS Yoga Vidya Pranic Healing Trust of UP Lucknow is ready to assist you on your healing journey.
                 </p>
               </div>
 
               {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-purple-600" />
+                <div className="w-12 h-12 bg-[#5a8f6f]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-[#5a8f6f]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Visit Us</h3>
-                  <p className="text-gray-600">
-                    123 Healing Lane<br />
-                    Wellness City, WC 12345<br />
-                    United States
+                  <h3 className="font-semibold text-[#3d5c4c] mb-2">Visit Us</h3>
+                  <p className="text-[#5a8f6f]">
+                    Lucknow, Uttar Pradesh<br />
+                    India
                   </p>
                 </div>
               </div>
 
               {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-[#6fa3d6]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-6 w-6 text-[#6fa3d6]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
-                  <p className="text-gray-600">
-                    Main: (555) 123-4567<br />
-                    Emergency: (555) 123-4568<br />
-                    Appointments: (555) 123-4569
+                  <h3 className="font-semibold text-[#3d5c4c] mb-2">Call Us</h3>
+                  <p className="text-[#5a8f6f]">
+                    Main: (+91) 94XXXXXX45
                   </p>
                 </div>
               </div>
 
               {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-teal-600" />
+                <div className="w-12 h-12 bg-[#c982d8]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-6 w-6 text-[#c982d8]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Email Us</h3>
-                  <p className="text-gray-600">
-                    General: info@pranichealingcenter.com<br />
-                    Appointments: book@pranichealingcenter.com<br />
-                    Support: support@pranichealingcenter.com
+                  <h3 className="font-semibold text-[#3d5c4c] mb-2">Email Us</h3>
+                  <p className="text-[#5a8f6f]">
+                    lucknow@pranichealingcenter.com
                   </p>
                 </div>
               </div>
 
               {/* Hours */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="h-6 w-6 text-green-600" />
+                <div className="w-12 h-12 bg-[#ddc743]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-6 w-6 text-[#ddc743]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Operating Hours</h3>
+                  <h3 className="font-semibold text-[#3d5c4c] mb-2">Operating Hours</h3>
                   <div className="space-y-1">
                     {operatingHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between text-gray-600 text-sm">
+                      <div key={index} className="flex justify-between text-[#5a8f6f] text-sm">
                         <span>{schedule.day}:</span>
                         <span>{schedule.hours}</span>
                       </div>
@@ -166,20 +156,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Social Media */}
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                    <Facebook className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
-                    <Instagram className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center text-white hover:bg-blue-500 transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                </div>
+              {/* Affiliation */}
+              <div className="p-4 bg-white rounded-lg border border-[#e0d4cc]">
+                <h3 className="font-semibold text-[#3d5c4c] mb-2">Official Affiliation</h3>
+                <p className="text-sm text-[#5a8f6f]">
+                  Part of World Pranic Healing Foundation
+                </p>
               </div>
             </motion.div>
           </div>
@@ -190,21 +172,21 @@ export default function Contact() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="bg-white rounded-2xl shadow-lg p-8 border border-[#e0d4cc]"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-[#3d5c4c] mb-6">Send Us a Message</h2>
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name and Email Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                       Full Name *
                     </label>
                     <input
                       {...register('name', { required: 'Name is required' })}
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                      className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
                       placeholder="Your full name"
                     />
                     {errors.name && (
@@ -213,7 +195,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                       Email Address *
                     </label>
                     <input
@@ -225,7 +207,7 @@ export default function Contact() {
                         }
                       })}
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                      className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -237,25 +219,25 @@ export default function Contact() {
                 {/* Phone and Subject Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                       Phone Number
                     </label>
                     <input
                       {...register('phone')}
                       type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-                      placeholder="(555) 123-4567"
+                      className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
+                      placeholder="(+91) 9XXXXXXXXX"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                       Subject *
                     </label>
                     <input
                       {...register('subject', { required: 'Subject is required' })}
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                      className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
                       placeholder="How can we help you?"
                     />
                     {errors.subject && (
@@ -266,12 +248,12 @@ export default function Contact() {
 
                 {/* Inquiry Type */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                     Type of Inquiry *
                   </label>
                   <select
                     {...register('inquiryType', { required: 'Please select inquiry type' })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                    className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
                   >
                     <option value="">Select inquiry type</option>
                     {inquiryTypes.map((type) => (
@@ -285,7 +267,7 @@ export default function Contact() {
 
                 {/* Preferred Contact Method */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                     Preferred Contact Method
                   </label>
                   <div className="flex flex-wrap gap-4">
@@ -294,40 +276,40 @@ export default function Contact() {
                         {...register('preferredContact')}
                         type="radio"
                         value="email"
-                        className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
+                        className="w-4 h-4 text-[#5a8f6f] border-[#d4c4b8] focus:ring-[#5a8f6f]"
                       />
-                      <span className="ml-2 text-gray-700">Email</span>
+                      <span className="ml-2 text-[#3d5c4c]">Email</span>
                     </label>
                     <label className="flex items-center">
                       <input
                         {...register('preferredContact')}
                         type="radio"
                         value="phone"
-                        className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
+                        className="w-4 h-4 text-[#5a8f6f] border-[#d4c4b8] focus:ring-[#5a8f6f]"
                       />
-                      <span className="ml-2 text-gray-700">Phone</span>
+                      <span className="ml-2 text-[#3d5c4c]">Phone</span>
                     </label>
                     <label className="flex items-center">
                       <input
                         {...register('preferredContact')}
                         type="radio"
                         value="no-preference"
-                        className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
+                        className="w-4 h-4 text-[#5a8f6f] border-[#d4c4b8] focus:ring-[#5a8f6f]"
                       />
-                      <span className="ml-2 text-gray-700">No Preference</span>
+                      <span className="ml-2 text-[#3d5c4c]">No Preference</span>
                     </label>
                   </div>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[#3d5c4c] mb-2">
                     Message *
                   </label>
                   <textarea
                     {...register('message', { required: 'Message is required' })}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                    className="w-full px-4 py-3 border border-[#d4c4b8] rounded-lg focus:ring-2 focus:ring-[#5a8f6f] focus:border-[#5a8f6f] transition-colors"
                     placeholder="Tell us more about how we can help you..."
                   />
                   {errors.message && (
@@ -342,9 +324,9 @@ export default function Contact() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`
-                    w-full bg-gradient-to-r from-purple-600 to-teal-600 text-white py-4 rounded-lg font-semibold 
+                    w-full bg-[#5a8f6f] text-white py-4 rounded-lg font-semibold 
                     transition-all duration-300 flex items-center justify-center space-x-2
-                    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'}
+                    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#3d5c4c]'}
                   `}
                 >
                   {isSubmitting ? (
@@ -368,14 +350,14 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="mt-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Find Us</h2>
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
+          <h2 className="text-3xl font-bold text-[#3d5c4c] mb-8 text-center">Our Center Location</h2>
+          <div className="bg-white rounded-2xl h-96 flex items-center justify-center border border-[#e0d4cc]">
             <div className="text-center">
-              <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">Interactive Map</h3>
-              <p className="text-gray-500">
-                Google Maps integration would be embedded here<br />
-                123 Healing Lane, Wellness City, WC 12345
+              <MapPin className="h-16 w-16 text-[#5a8f6f] mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-[#3d5c4c] mb-2">MCKS Yoga Vidya Pranic Healing Trust of UP</h3>
+              <p className="text-[#5a8f6f]">
+                Lucknow, Uttar Pradesh, India<br />
+                <span className="text-sm text-[#7fa9c9]">Part of World Pranic Healing Foundation</span>
               </p>
             </div>
           </div>
